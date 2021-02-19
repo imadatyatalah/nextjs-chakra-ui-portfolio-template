@@ -11,6 +11,8 @@
     "@chakra-ui/react": "^1.3.3",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.7",
     "framer-motion": "^3.6.0",
     "next": "10.0.7",
     "react": "17.0.1",
