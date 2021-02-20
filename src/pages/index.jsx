@@ -1,8 +1,6 @@
 import { Box, Button, Heading, Text } from "@chakra-ui/react"
 import NextImage from "next/image"
 
-import { MAX_WIDTH } from "../../config"
-
 const Home = () => (
   <>
     <Box
@@ -13,9 +11,6 @@ const Home = () => (
       textAlign="center"
       minH="100vh"
       py="4"
-      px={[4, 6, 10, 14, 20]}
-      maxW={MAX_WIDTH}
-      mx="auto"
     >
       <NextImage src="/bighead.svg" width="300" height="300" alt="big head" />
       <Box>
