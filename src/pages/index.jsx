@@ -9,7 +9,6 @@ const Home = () => (
       alignItems="center"
       flexDir="column"
       textAlign="center"
-      minH="100vh"
       py="4"
     >
       <NextImage src="/bighead.svg" width="300" height="300" alt="big head" />
@@ -20,7 +19,7 @@ const Home = () => (
             👋🏻
           </span>
         </Heading>
-        <Heading as="h3" fontSize="3xl" fontWeight="700">
+        <Heading fontSize="3xl" fontWeight="700">
           <Text as="span" color="teal.300">
             Building
           </Text>{" "}
