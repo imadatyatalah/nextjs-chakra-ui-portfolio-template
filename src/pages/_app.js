@@ -1,7 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react"
+import { MDXProvider } from "@mdx-js/react"
 
 import theme from "../components/theme"
 import Layout from "../components/layouts"
+import MDXComponents from "../components/MDXComponents"
 
 import "@fontsource/poppins/100.css"
 import "@fontsource/poppins/200.css"
@@ -17,7 +19,9 @@ const MyApp = ({ Component, pageProps }) => (
   <>
     <ChakraProvider theme={theme}>
       <Layout>
-        <Component {...pageProps} />
+        <MDXProvider components={MDXComponents}>
+          <Component {...pageProps} />
+        </MDXProvider>
       </Layout>
     </ChakraProvider>
   </>
