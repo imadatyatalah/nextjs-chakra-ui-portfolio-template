@@ -5,6 +5,8 @@ import theme from "../components/theme"
 import Layout from "../components/layouts"
 import MDXComponents from "../components/MDXComponents"
 
+import "../styles/index.css"
+
 import "@fontsource/poppins/100.css"
 import "@fontsource/poppins/200.css"
 import "@fontsource/poppins/300.css"
