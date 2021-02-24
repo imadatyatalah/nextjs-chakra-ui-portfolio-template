@@ -1,0 +1,30 @@
+.remark-code-title {
+  font-family: mono;
+  display: flex;
+  width: 100%;
+  padding: 10px 8px;
+  margin: 0.5em 0 0 0;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+.chakra-ui-light .remark-code-title {
+  color: #1a202c;
+  background-color: #edf2f7;
+}
+
+.chakra-ui-dark .remark-code-title {
+  color: #e2e8f0;
+  background-color: #e2e8f029;
+}
+
+pre {
+  padding: 10px 0;
+}
+
+.remark-code-title + pre {
+  padding: 0 0 10px 0;
+}
