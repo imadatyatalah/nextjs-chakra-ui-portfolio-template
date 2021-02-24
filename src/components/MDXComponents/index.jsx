@@ -1,12 +1,13 @@
-import { Heading } from "@chakra-ui/react"
+import Image from "next/image"
+
+import CodeBlock from "./codeBlock"
+import CustomLink from "./customLink"
 
 const MDXComponents = {
-  h1: (props) => <Heading as="h1" {...props} />,
-  h2: (props) => <Heading color="red" {...props} />,
-  h3: (props) => <Heading as="h3" {...props} />,
-  h4: (props) => <Heading as="h4" {...props} />,
-  h5: (props) => <Heading as="h5" {...props} />,
-  h6: (props) => <Heading as="h6" {...props} />,
+  a: CustomLink,
+  code: CodeBlock,
+
+  Image,
 }
 
 export default MDXComponents
