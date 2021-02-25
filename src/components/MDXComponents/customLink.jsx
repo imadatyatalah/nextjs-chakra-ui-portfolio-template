@@ -1,3 +1,4 @@
+import { Link as ChakraLink } from "@chakra-ui/react"
 import NextLink from "next/link"
 
 const CustomLink = (props) => {
@@ -7,12 +8,12 @@ const CustomLink = (props) => {
   if (isInternalLink) {
     return (
       <NextLink href={href} passHref>
-        <a {...props} />
+        <ChakraLink {...props} />
       </NextLink>
     )
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return <ChakraLink isExternal {...props} />
 }
 
 export default CustomLink
