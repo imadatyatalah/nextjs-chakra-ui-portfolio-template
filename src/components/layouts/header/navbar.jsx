@@ -22,6 +22,7 @@ const Navbar = () => {
         display="flex"
         flexDir={{ base: "row-reverse", lg: "row" }}
         alignItems="center"
+        fontWeight="500"
       >
         <HamburgerMenu toggled={isOpen} toggle={setIsOpen} />
         <Box
