@@ -21,12 +21,7 @@ export async function getFileBySlug(type, slug) {
   const mdxSource = await renderToString(content, {
     components: MDXComponents,
     mdxOptions: {
-      remarkPlugins: [
-        require("remark-slug"),
-        require("remark-autolink-headings"),
-        // Note that this module must be included after `remark-slug`
-        require("remark-code-titles"),
-      ],
+      remarkPlugins: [require("remark-slug"), require("remark-code-titles")],
     },
   })
 
