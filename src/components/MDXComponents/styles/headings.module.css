@@ -1,0 +1,30 @@
+.heading {
+  margin: 0.75em 0;
+  font-weight: 700;
+}
+
+.heading a:hover {
+  opacity: 0.75;
+}
+
+.wrapper {
+  pointer-events: auto;
+}
+
+.hashtag {
+  color: #3182ce;
+  font-weight: normal;
+  outline: none;
+  opacity: 0;
+  margin-left: 0.375rem;
+}
+
+.visuallyHidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
