@@ -6,7 +6,7 @@ const CustomLink = (props) => {
 
   if (isInternalLink) {
     return (
-      <NextLink href={href}>
+      <NextLink href={href} passHref>
         <a {...props} />
       </NextLink>
     )
