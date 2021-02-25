@@ -1,7 +1,12 @@
 import { getAllFilesFrontMatter } from "../../lib/posts"
+import BlogPost from "../../components/blogPost"
 
 const index = ({ posts }) => {
-  return <></>
+  return (
+    <>
+      <BlogPost data={posts} />
+    </>
+  )
 }
 
 export async function getStaticProps() {
