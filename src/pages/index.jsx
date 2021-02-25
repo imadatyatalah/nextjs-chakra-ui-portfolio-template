@@ -1,13 +1,35 @@
 import { Box, Button, Heading, Text } from "@chakra-ui/react"
+import { NextSeo } from "next-seo"
 import NextImage from "next/image"
 
-import { data } from "../../config"
+import { seo, data } from "../../config"
 
 const Home = () => {
   const isOdd = (num) => num % 2
 
+  const title = "Home"
+  const siteTitle = seo.title
+
   return (
     <>
+      <NextSeo
+        title={`${title} | ${siteTitle}`}
+        description={seo.description}
+        canonical={seo.canonical}
+        openGraph={{
+          title: title,
+          description: seo.description,
+          images: [
+            {
+              url: `${seo.canonical}bighead.svg`,
+              width: "350px",
+              height: "350px",
+              alt: "Imad's avatar bigheads",
+            },
+          ],
+        }}
+      />
+
       <Box
         as="section"
         d="flex"
@@ -16,7 +38,12 @@ const Home = () => {
         textAlign="center"
         py="4"
       >
-        <NextImage src="/bighead.svg" width="300" height="300" alt="big head" />
+        <NextImage
+          src="/bighead.svg"
+          width="350"
+          height="350"
+          alt="Imad's avatar bigheads"
+        />
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
             Hi, I'm Imad{" "}
