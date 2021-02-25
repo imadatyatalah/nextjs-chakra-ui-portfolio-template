@@ -1,4 +1,9 @@
-export const MAX_WIDTH = "1440px"
+export const seo = {
+  title: "Portfolio Boilerplate",
+  description:
+    "A Next.js boilerplate for building your portfolio as quick as possible",
+  canonical: "https://portfolio-boilerplate-nextjs.vercel.app/",
+}
 
 export const links = [
   { title: "Home", path: "/" },
@@ -27,3 +32,5 @@ export const data = [
     image: "/code-review-bro.png",
   },
 ]
+
+export const MAX_WIDTH = "1440px"
