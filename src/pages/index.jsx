@@ -52,7 +52,7 @@ const Home = () => {
             </span>
           </Heading>
           <Heading fontSize="3xl" fontWeight="700">
-            <Text as="span" color="teal.300">
+            <Text as="span" color="telegram.500">
               Building
             </Text>{" "}
             digital products, Brands, And experience.
@@ -69,7 +69,7 @@ const Home = () => {
             based in MA, I specialize in UI/UX design, Responsive web design,
             And accessibility.
           </Text>
-          <Button colorScheme="teal" variant="ghost" size="lg">
+          <Button colorScheme="telegram" variant="ghost" size="lg">
             Get in touch
           </Button>
         </Box>
