@@ -8,7 +8,11 @@ export default function Blog({ mdxSource, frontMatter }) {
     components: MDXComponents,
   })
 
-  return <></>
+  return (
+    <>
+      <article>{content}</article>
+    </>
+  )
 }
 
 export async function getStaticPaths() {
