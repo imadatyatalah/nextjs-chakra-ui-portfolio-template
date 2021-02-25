@@ -6,7 +6,7 @@ import Navbar from "./navbar"
 
 const Header = () => (
   <>
-    <Box as="header" boxShadow="md">
+    <Box as="header" boxShadow="md" fontSize="18px">
       <Box
         display="flex"
         justifyContent="space-between"
