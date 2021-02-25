@@ -1,20 +1,23 @@
 import { ChakraProvider } from "@chakra-ui/react"
 import { MDXProvider } from "@mdx-js/react"
+import { DefaultSeo } from "next-seo"
 
 import theme from "../components/theme"
 import Layout from "../components/layouts"
 import MDXComponents from "../components/MDXComponents"
-
-import "../styles/index.css"
+import SEO from "../../next-seo.config"
 
 import "@fontsource/poppins/400.css"
 import "@fontsource/poppins/500.css"
 import "@fontsource/poppins/600.css"
 import "@fontsource/poppins/700.css"
+import "../styles/index.css"
 
 const MyApp = ({ Component, pageProps }) => (
   <>
     <ChakraProvider theme={theme}>
+      <DefaultSeo {...SEO} />
+
       <Layout>
         <MDXProvider components={MDXComponents}>
           <Component {...pageProps} />
