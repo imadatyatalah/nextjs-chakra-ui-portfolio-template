@@ -1,8 +1,10 @@
+import { Code } from "@chakra-ui/react"
 import Image from "next/image"
 import dynamic from "next/dynamic"
 
 const CodeBlock = dynamic(() => import("./codeBlock"))
 
+import { UnorderedList, OrderedList, ListItem } from "./common"
 import CustomLink from "./customLink"
 import Headings from "./headings"
 
@@ -14,9 +16,12 @@ const MDXComponents = {
   h5: (props) => <Headings as="h5" size="sm" {...props} />,
   h6: (props) => <Headings as="h6" size="xs" {...props} />,
 
-  a: CustomLink,
   code: CodeBlock,
-
+  a: CustomLink,
+  ul: UnorderedList,
+  ol: OrderedList,
+  li: ListItem,
+  inlineCode: (props) => <Code {...props} />,
   Image,
 }
 
