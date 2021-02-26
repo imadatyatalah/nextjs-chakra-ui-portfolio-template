@@ -1,10 +1,10 @@
 import { getAllFilesFrontMatter } from "../../lib/posts"
-import BlogPost from "../../components/blogPost"
+import Post from "../../components/articlePost"
 
 const index = ({ posts }) => {
   return (
     <>
-      <BlogPost data={posts} />
+      <Post data={posts} />
     </>
   )
 }
