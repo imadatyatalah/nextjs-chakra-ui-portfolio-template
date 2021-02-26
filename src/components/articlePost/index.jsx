@@ -2,7 +2,7 @@ import { Box, chakra, Heading, Text, useColorModeValue } from "@chakra-ui/react"
 import NextLink from "next/link"
 import dayjs from "dayjs"
 
-const BlogPost = ({ data }) => {
+const ArticlePost = ({ data }) => {
   const bg = useColorModeValue("gray.50", "gray.700")
   const summaryColor = useColorModeValue("gray.600", "gray.300")
   const dateColor = useColorModeValue("gray.500", "gray.400")
@@ -43,4 +43,4 @@ const BlogPost = ({ data }) => {
   )
 }
 
-export default BlogPost
+export default ArticlePost
