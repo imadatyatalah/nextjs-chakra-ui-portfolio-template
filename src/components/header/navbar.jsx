@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { Box, useColorModeValue } from "@chakra-ui/react"
 
-import HamburgerMenu from "../../UI/hamburgerMenu"
+import HamburgerMenu from "../UI/hamburgerMenu"
 import Links from "./links"
-import ColorModeToggle from "../../UI/colorModeToggle"
+import ColorModeToggle from "../UI/colorModeToggle"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

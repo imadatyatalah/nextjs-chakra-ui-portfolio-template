@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react"
 
-import { MAX_WIDTH } from "../../../config"
-import Header from "./header"
+import { MAX_WIDTH } from "../../config"
+import Header from "../components/header"
 
 const Layout = ({ children }) => (
   <>

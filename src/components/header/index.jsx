@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react"
 
-import { MAX_WIDTH } from "../../../../config"
-import Logo from "../../UI/logo"
+import { MAX_WIDTH } from "../../../config"
+import Logo from "../UI/logo"
 import Navbar from "./navbar"
 
 const Header = () => (
