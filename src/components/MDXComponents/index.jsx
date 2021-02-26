@@ -1,6 +1,8 @@
 import Image from "next/image"
+import dynamic from "next/dynamic"
 
-import CodeBlock from "./codeBlock"
+const CodeBlock = dynamic(() => import("./codeBlock"))
+
 import CustomLink from "./customLink"
 import Headings from "./headings"
 
