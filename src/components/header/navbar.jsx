@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Box, useColorModeValue } from "@chakra-ui/react"
+import { Box, chakra, useColorModeValue } from "@chakra-ui/react"
 
 import HamburgerMenu from "../UI/hamburgerMenu"
 import Links from "./links"
@@ -21,8 +21,7 @@ const Navbar = () => {
         fontWeight="500"
       >
         <HamburgerMenu toggled={isOpen} toggle={setIsOpen} />
-        <Box
-          as="ul"
+        <chakra.ul
           bg={{ base: bg, lg: "transparent" }}
           color={{ base: "black", lg: color }}
           display={{
@@ -41,7 +40,7 @@ const Navbar = () => {
           zIndex="2"
         >
           <Links onClick={() => setIsOpen(false)} />
-        </Box>
+        </chakra.ul>
 
         <ColorModeToggle />
       </Box>
