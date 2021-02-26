@@ -11,9 +11,9 @@ const DarkModeToggle = () => {
           colorMode === "light" ? "switch to dark mode" : "switch to light mode"
         }
         ml={{ lg: "6" }}
-        onClick={toggleColorMode}
         variant="ghost"
         _hover={{ color: "black", bgColor: "white" }}
+        onClick={toggleColorMode}
       >
         {colorMode === "light" ? (
           <MoonIcon name="moon-icon" />

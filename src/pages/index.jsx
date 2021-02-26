@@ -1,10 +1,12 @@
-import { Box, Button, Heading, Text } from "@chakra-ui/react"
+import { Box, Button, Heading, Text, useColorModeValue } from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
 import NextImage from "next/image"
 
 import { seo, data } from "../../config"
 
 const Home = () => {
+  const hg = useColorModeValue("telegram.500", "telegram.400")
+
   const isOdd = (num) => num % 2
 
   const title = "Home"
@@ -51,8 +53,8 @@ const Home = () => {
               👋🏻
             </span>
           </Heading>
-          <Heading fontSize="3xl" fontWeight="700">
-            <Text as="span" color="telegram.500">
+          <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
+            <Text as="span" color={hg}>
               Building
             </Text>{" "}
             digital products, Brands, And experience.
@@ -69,7 +71,12 @@ const Home = () => {
             based in MA, I specialize in UI/UX design, Responsive web design,
             And accessibility.
           </Text>
-          <Button colorScheme="telegram" variant="ghost" size="lg">
+          <Button
+            colorScheme="telegram"
+            variant="ghost"
+            size="lg"
+            fontSize="20px"
+          >
             Get in touch
           </Button>
         </Box>
