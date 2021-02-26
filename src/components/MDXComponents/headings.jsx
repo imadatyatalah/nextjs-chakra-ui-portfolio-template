@@ -12,7 +12,6 @@ const Headings = (props) => {
           <span className={styles.visuallyHidden}>
             Read the {children} section.
           </span>
-          {children}
           {id && (
             <chakra.a
               aria-label="anchor"
@@ -22,6 +21,7 @@ const Headings = (props) => {
               #
             </chakra.a>
           )}
+          {children}
         </Box>
       </Heading>
     </>

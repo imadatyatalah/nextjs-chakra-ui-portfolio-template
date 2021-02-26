@@ -12,11 +12,33 @@
 }
 
 .hashtag {
+  position: absolute;
+  left: 0;
+
   color: #3182ce;
-  font-weight: normal;
+  font-weight: 500;
   outline: none;
   opacity: 0;
-  margin-left: 0.375rem;
+}
+
+h1 .hashtag {
+  left: -2px;
+}
+
+h3 .hashtag {
+  left: 3px;
+}
+
+h4 .hashtag {
+  left: 5px;
+}
+
+h5 .hashtag {
+  left: 8px;
+}
+
+h6 .hashtag {
+  left: 8px;
 }
 
 .visuallyHidden {
