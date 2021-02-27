@@ -1,7 +1,4 @@
 import Image from "next/image"
-import dynamic from "next/dynamic"
-
-const CodeBlock = dynamic(() => import("./codeBlock"))
 
 import {
   CustomLink,
@@ -11,6 +8,7 @@ import {
   InlineCode,
 } from "./common"
 import Headings from "./headings"
+import CodeBlock from "./codeBlock"
 
 const MDXComponents = {
   h1: (props) => <Headings as="h1" size="2xl" {...props} />,
