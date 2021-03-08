@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react"
 
 import { MAX_WIDTH } from "../../config"
 import Header from "../components/header"
+import Footer from "../components/footer"
 
 const Layout = ({ children }) => (
   <>
@@ -16,6 +17,7 @@ const Layout = ({ children }) => (
     >
       {children}
     </Box>
+    <Footer />
   </>
 )
 
