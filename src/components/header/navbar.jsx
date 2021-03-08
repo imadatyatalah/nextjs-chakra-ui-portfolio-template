@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { Box, chakra, useColorModeValue } from "@chakra-ui/react"
+import NextLink from "next/link"
 
+import { links } from "../../../config"
 import HamburgerMenu from "../UI/hamburgerMenu"
-import Links from "./links"
 import ColorModeToggle from "../UI/colorModeToggle"
 
 const Navbar = () => {
@@ -39,7 +40,18 @@ const Navbar = () => {
           boxShadow={{ base: "xl", lg: "none" }}
           zIndex="2"
         >
-          <Links onClick={() => setIsOpen(false)} />
+          {links.map((link) => (
+            <chakra.li
+              listStyleType="none"
+              px={{ lg: "8" }}
+              py={{ base: "3", lg: "0" }}
+              key={link.title}
+            >
+              <NextLink href={link.path}>
+                <a onClick={() => setIsOpen(false)}>{link.title}</a>
+              </NextLink>
+            </chakra.li>
+          ))}
         </chakra.ul>
 
         <ColorModeToggle />
