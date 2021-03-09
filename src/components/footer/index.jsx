@@ -12,7 +12,7 @@ const socialAccounts = [
 
 const Footer = () => (
   <>
-    <Box as="footer" fontSize="18px">
+    <Box as="footer">
       <Box
         display="flex"
         justifyContent="center"

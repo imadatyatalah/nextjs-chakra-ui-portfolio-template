@@ -13,7 +13,6 @@ const Layout = ({ children }) => (
       maxW={MAX_WIDTH}
       mx="auto"
       minH="100vh"
-      fontSize="18px"
     >
       {children}
     </Box>
