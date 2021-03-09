@@ -12,41 +12,9 @@
 }
 
 .hashtag {
-  position: absolute;
-  left: 0;
-
+  padding-left: 2px;
   color: #3182ce;
   font-weight: 500;
   outline: none;
   opacity: 0;
-}
-
-h1 .hashtag {
-  left: -2px;
-}
-
-h3 .hashtag {
-  left: 3px;
-}
-
-h4 .hashtag {
-  left: 5px;
-}
-
-h5 .hashtag {
-  left: 8px;
-}
-
-h6 .hashtag {
-  left: 8px;
-}
-
-.visuallyHidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }

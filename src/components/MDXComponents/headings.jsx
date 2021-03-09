@@ -1,4 +1,4 @@
-import { Box, chakra, Heading } from "@chakra-ui/react"
+import { Box, chakra, Heading, VisuallyHidden } from "@chakra-ui/react"
 
 import styles from "./styles/headings.module.css"
 
@@ -9,9 +9,8 @@ const Headings = (props) => {
     <>
       <Heading className={styles.heading} {...props}>
         <Box className={styles.wrapper}>
-          <span className={styles.visuallyHidden}>
-            Read the {children} section.
-          </span>
+          <VisuallyHidden>Read the {children} section.</VisuallyHidden>
+          {children}
           {id && (
             <chakra.a
               aria-label="anchor"
@@ -21,7 +20,6 @@ const Headings = (props) => {
               #
             </chakra.a>
           )}
-          {children}
         </Box>
       </Heading>
     </>
