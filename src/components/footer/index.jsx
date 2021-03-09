@@ -5,9 +5,9 @@ import { MAX_WIDTH } from "../../../config"
 
 // Fell free to add your social media accounts!
 const socialAccounts = [
-  { icon: FaGithub, path: "https://github.com/" },
-  { icon: FaLinkedin, path: "https://www.linkedin.com/" },
-  { icon: FaInstagram, path: "https://www.instagram.com/" },
+  { icon: FaGithub, path: "https://github.com/", title: "Github" },
+  { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
+  { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
 ]
 
 const Footer = () => (
@@ -26,8 +26,13 @@ const Footer = () => (
       >
         <Box py="2">
           {socialAccounts.map((item, index) => (
-            <ChakraLink href={item.path} key={index} isExternal>
-              <Button mx="2">
+            <ChakraLink
+              href={item.path}
+              aria-label={item.title}
+              key={index}
+              isExternal
+            >
+              <Button mx="2" aria-label={item.title}>
                 <Icon as={item.icon} w="6" h="6" />
               </Button>
             </ChakraLink>
@@ -53,16 +58,17 @@ const Footer = () => (
             </ChakraLink>
             , Hosted in{" "}
             <ChakraLink href="http://vercel.com/" fontWeight="600" isExternal>
-              Vercel
+              Vercel.
             </ChakraLink>
           </Text>
         </Box>
         <Box py="2">
           <ChakraLink
             href="https://github.com/imadatyatalah/portfolio-boilerplate-nextjs"
+            aria-label="source code"
             isExternal
           >
-            <Button>
+            <Button aria-label="source code">
               <Icon as={FaCode} w="6" h="6" />
             </Button>
           </ChakraLink>
