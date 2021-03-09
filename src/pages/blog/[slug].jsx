@@ -4,9 +4,9 @@ import hydrate from "next-mdx-remote/hydrate"
 import { getFiles, getFileBySlug } from "../../lib/posts"
 import { seo } from "../../../config"
 import MDXComponents from "../../components/MDXComponents"
-import Article from "../../components/article"
+import Article from "../../layouts/article"
 
-export default function Blog({ mdxSource, frontMatter }) {
+const BlogPost = ({ mdxSource, frontMatter }) => {
   const content = hydrate(mdxSource, {
     components: MDXComponents,
   })
@@ -55,3 +55,5 @@ export async function getStaticProps({ params }) {
 
   return { props: post }
 }
+
+export default BlogPost
