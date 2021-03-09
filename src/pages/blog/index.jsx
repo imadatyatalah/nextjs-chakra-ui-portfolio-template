@@ -1,7 +1,7 @@
 import { getAllFilesFrontMatter } from "../../lib/posts"
 import Post from "../../components/articlePost"
 
-const index = ({ posts }) => {
+const Blog = ({ posts }) => {
   return (
     <>
       <Post data={posts} />
@@ -15,4 +15,4 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
-export default index
+export default Blog
