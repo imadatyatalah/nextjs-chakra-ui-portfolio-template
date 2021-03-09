@@ -5,17 +5,17 @@ import theme from "../theme"
 import Layout from "../layouts/global"
 import SEO from "../../next-seo.config"
 
-import "@fontsource/poppins/400.css"
-import "@fontsource/poppins/500.css"
-import "@fontsource/poppins/600.css"
-import "@fontsource/poppins/700.css"
+import "@fontsource/poppins/latin-400.css"
+import "@fontsource/poppins/latin-500.css"
+import "@fontsource/poppins/latin-600.css"
+import "@fontsource/poppins/latin-700.css"
 import "../styles/index.css"
 
 const MyApp = ({ Component, pageProps }) => (
   <>
-    <ChakraProvider theme={theme}>
-      <DefaultSeo {...SEO} />
+    <DefaultSeo {...SEO} />
 
+    <ChakraProvider theme={theme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
