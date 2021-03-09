@@ -5,7 +5,7 @@ import NextImage from "next/image"
 import { seo, data } from "../../config"
 
 const Home = () => {
-  const hg = useColorModeValue("telegram.500", "telegram.400")
+  const color = useColorModeValue("telegram.500", "telegram.400")
 
   const isOdd = (num) => num % 2
 
@@ -54,7 +54,7 @@ const Home = () => {
             </span>
           </Heading>
           <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-            <Text as="span" color={hg}>
+            <Text as="span" color={color}>
               Building
             </Text>{" "}
             digital products, Brands, And experience.

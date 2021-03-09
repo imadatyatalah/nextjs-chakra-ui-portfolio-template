@@ -37,12 +37,13 @@ const Header = ({ frontMatter }) => {
                     <Tag
                       m="1"
                       size="lg"
-                      pb="px"
+                      pt="px"
+                      pb="1"
                       bgColor={color.bgColor}
                       color={color.color}
                       transitionDuration="250ms"
+                      cursor="pointer"
                       _hover={{
-                        cursor: "pointer",
                         backgroundColor: color.hover,
                       }}
                     >
