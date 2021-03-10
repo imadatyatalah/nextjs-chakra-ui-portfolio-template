@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import {
   Box,
   Flex,
@@ -6,12 +7,12 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
-import NextLink from "next/link"
 import dayjs from "dayjs"
 
 import { tagColor } from "../../components/UI/tagColor"
 
 const Header = ({ frontMatter }) => {
+  const router = useRouter()
   const color = useColorModeValue("gray.700", "gray.400")
 
   return (
@@ -32,25 +33,27 @@ const Header = ({ frontMatter }) => {
               const color = tagColor[tag]
 
               return (
-                <NextLink href={`/blog/tags/${tag}`} key={tag}>
-                  <a>
-                    <Tag
-                      m="1"
-                      size="lg"
-                      pt="px"
-                      pb="1"
-                      bgColor={color.bgColor}
-                      color={color.color}
-                      transitionDuration="250ms"
-                      cursor="pointer"
-                      _hover={{
-                        backgroundColor: color.hover,
-                      }}
-                    >
-                      {tag}
-                    </Tag>
-                  </a>
-                </NextLink>
+                <Tag
+                  m="1"
+                  size="lg"
+                  pt="px"
+                  pb="1"
+                  bgColor={color.bgColor}
+                  color={color.color}
+                  transitionDuration="250ms"
+                  cursor="pointer"
+                  _hover={{
+                    backgroundColor: color.hover,
+                  }}
+                  onClick={() =>
+                    router.push({
+                      pathname: "/blog/",
+                      query: { tag },
+                    })
+                  }
+                >
+                  {tag}
+                </Tag>
               )
             })}
           </Text>

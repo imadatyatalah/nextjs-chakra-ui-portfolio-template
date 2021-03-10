@@ -1,4 +1,4 @@
-import { Box, chakra, Heading, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react"
 import NextLink from "next/link"
 import dayjs from "dayjs"
 
@@ -11,7 +11,7 @@ const ArticlePost = ({ data }) => {
     <>
       {data.map((item) => (
         <NextLink href={`/blog/${item.slug}`} key={item.title}>
-          <chakra.a href={`/blog/${item.slug}`}>
+          <a>
             <Box
               my="3"
               py="2"
@@ -36,7 +36,7 @@ const ArticlePost = ({ data }) => {
                 </Text>
               )}
             </Box>
-          </chakra.a>
+          </a>
         </NextLink>
       ))}
     </>
