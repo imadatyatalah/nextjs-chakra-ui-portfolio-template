@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/router"
 import {
   Alert,
   AlertIcon,
@@ -15,8 +16,13 @@ import { tagColor } from "../../components/UI/tagColor"
 import TagComponent from "../../components/UI/tag"
 
 const Blog = ({ posts }) => {
+  const router = useRouter()
+
   const [currentSelectedTag, setCurrentSelectedTag] = useState("")
   const [blogPost, setBlogPost] = useState(posts)
+
+  const summaryColor = useColorModeValue("gray.600", "gray.300")
+  const dateColor = useColorModeValue("gray.500", "gray.400")
 
   const filteredPosts = (tag) => {
     setCurrentSelectedTag(tag)
@@ -24,8 +30,11 @@ const Blog = ({ posts }) => {
     setBlogPost(blogResults)
   }
 
-  const summaryColor = useColorModeValue("gray.600", "gray.300")
-  const dateColor = useColorModeValue("gray.500", "gray.400")
+  useEffect(() => {
+    if (router.query?.tag !== undefined) {
+      filteredPosts(router.query?.tag)
+    }
+  }, [router])
 
   return (
     <>
@@ -85,7 +94,7 @@ const Blog = ({ posts }) => {
           </Box>
         ))
       ) : (
-        <Alert status="info" borderRadius="md">
+        <Alert status="info" d="flex" justifyContent="center" borderRadius="md">
           <AlertIcon />
           <Text fontWeight="500">
             No blog post has been found about{" "}
