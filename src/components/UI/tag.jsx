@@ -3,7 +3,7 @@ import { Tag } from "@chakra-ui/react"
 const TagComponent = ({ children, color, ...props }) => (
   <>
     <Tag
-      fontSize=".8rem"
+      fontSize=".9rem"
       fontWeight="600"
       color={color.color}
       backgroundColor={color.bgColor}
