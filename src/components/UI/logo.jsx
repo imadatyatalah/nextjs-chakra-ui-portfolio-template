@@ -3,8 +3,8 @@ import NextLink from "next/link"
 
 const Logo = () => (
   <>
-    <NextLink href="/">
-      <chakra.a href="/" fontSize="2rem" fontWeight="700">
+    <NextLink href="/" passHref>
+      <chakra.a fontSize="2rem" fontWeight="700">
         LOGO
       </chakra.a>
     </NextLink>
