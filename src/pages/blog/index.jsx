@@ -68,7 +68,7 @@ const Blog = ({ posts }) => {
               </NextLink>
             </Heading>
 
-            <Text fontWeight="400" color={summaryColor} py="1">
+            <Text fontSize="17px" fontWeight="400" color={summaryColor} py="1">
               {item.summary}
             </Text>
 
@@ -87,7 +87,7 @@ const Blog = ({ posts }) => {
             })}
 
             {item.date && (
-              <Text fontSize="sm" fontWeight="500" color={dateColor} py="1">
+              <Text fontSize="16px" fontWeight="500" color={dateColor} py="1">
                 {dayjs(item.date).format("MMM DD, YYYY")}
               </Text>
             )}
