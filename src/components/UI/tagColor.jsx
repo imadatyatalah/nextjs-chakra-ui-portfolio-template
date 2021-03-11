@@ -1,6 +1,6 @@
 export const tagColor = {
   nextjs: { bgColor: "#0A7B83E2", color: "white", hover: "#09686dE2" },
-  javascript: { bgColor: "#F5B50FE2", color: "black", hover: "#d69e0cE2" },
+  javascript: { bgColor: "#ffd500", color: "black", hover: "#fdc500" },
   typescript: { bgColor: "#3178C6E2", color: "white", hover: "#265d99E2" },
   api: { bgColor: "#E8265EE2", color: "white", hover: "#ce0840E2" },
   asynchronous: { bgColor: "#1A91DAE2", color: "white", hover: "#0b7bbcE2" },
@@ -10,7 +10,7 @@ export const tagColor = {
   flutter: { bgColor: "#DC541FE2", color: "white", hover: "#ce4412E2" },
   reactnative: { bgColor: "#2fce91E2", color: "white", hover: "#14b675E2" },
   design: { bgColor: "#f11df1E2", color: "white", hover: "#d313d3E2" },
-  html: { bgColor: "#E5CE37E2", color: "white", hover: "#d3bb1fE2" },
+  html: { bgColor: "#f06529", color: "white", hover: "#e34c26" },
   nodejs: { bgColor: "#ff7bacE2", color: "white", hover: "#f7659aE2" },
   ssr: { bgColor: "#77aa7bE2", color: "white", hover: "#609363E2" },
   css: { bgColor: "#FE4A49E2", color: "white", hover: "#ed3434E2" },

@@ -3,24 +3,33 @@ import {
   Box,
   Flex,
   Heading,
-  Tag,
   Text,
+  Link as ChakraLink,
   useColorModeValue,
+  Icon,
 } from "@chakra-ui/react"
 import { MDXProvider } from "@mdx-js/react"
+import { MdEdit } from "react-icons/md"
 import dayjs from "dayjs"
 
 import { tagColor } from "../components/UI/tagColor"
 import MDXComponents from "../components/MDXComponents"
+import TagComponent from "../components/UI/tag"
 
 const Article = ({ children, frontMatter }) => {
   const router = useRouter()
+
   const color = useColorModeValue("gray.700", "gray.400")
 
   return (
     <>
       <MDXProvider components={MDXComponents}>
-        <Box as="section" px={{ md: "10", lg: "20", xl: "40" }} py="4">
+        <Box
+          as="section"
+          px={{ md: "10", lg: "20", xl: "40" }}
+          py="4"
+          fontSize="16px"
+        >
           <Box as="header" textAlign="center">
             <Heading as="h1" py="4" size="2xl">
               {frontMatter.title}
@@ -37,18 +46,8 @@ const Article = ({ children, frontMatter }) => {
                   const color = tagColor[tag]
 
                   return (
-                    <Tag
-                      m="1"
-                      size="lg"
-                      pt="px"
-                      pb="1"
-                      bgColor={color.bgColor}
-                      color={color.color}
-                      transitionDuration="250ms"
-                      cursor="pointer"
-                      _hover={{
-                        backgroundColor: color.hover,
-                      }}
+                    <TagComponent
+                      color={color}
                       onClick={() =>
                         router.push({
                           pathname: "/blog/",
@@ -58,14 +57,29 @@ const Article = ({ children, frontMatter }) => {
                       key={tag}
                     >
                       {tag}
-                    </Tag>
+                    </TagComponent>
                   )
                 })}
               </Text>
             </Flex>
           </Box>
 
-          <Box as="article">{children}</Box>
+          <Box as="article">
+            {children}
+
+            <Text fontWeight="500" py="6">
+              <ChakraLink
+                href={`https://github.com/imadatyatalah/portfolio-boilerplate-nextjs/blob/main/src/data/blog/${frontMatter.slug}.mdx`}
+                d="flex"
+                alignItems="flex-end"
+                _focus={{ outline: "none" }}
+                isExternal
+              >
+                <Icon as={MdEdit} w={6} h={6} marginRight="2" />
+                Edit this page on github.
+              </ChakraLink>
+            </Text>
+          </Box>
         </Box>
       </MDXProvider>
     </>
