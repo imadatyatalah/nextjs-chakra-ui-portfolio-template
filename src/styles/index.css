@@ -1,12 +1,13 @@
 .remark-code-title {
-  font-family: mono;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 15.75px;
   display: flex;
   width: 100%;
   padding: 10px 8px;
   margin: 0.5em 0 0 0;
-  border-top: 1px solid gray;
-  border-right: 1px solid gray;
-  border-left: 1px solid gray;
+  border: 1px solid gray;
+  border-bottom: none;
 }
 
 .chakra-ui-light .remark-code-title {

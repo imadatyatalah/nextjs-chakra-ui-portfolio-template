@@ -76,7 +76,7 @@ const Article = ({ children, frontMatter }) => {
                 isExternal
               >
                 <Icon as={MdEdit} w={6} h={6} marginRight="2" />
-                Edit this page
+                Edit this page on github.
               </ChakraLink>
             </Text>
           </Box>
