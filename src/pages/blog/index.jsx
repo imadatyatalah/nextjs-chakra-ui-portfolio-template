@@ -8,11 +8,13 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
+import { NextSeo } from "next-seo"
 import NextLink from "next/link"
 import dayjs from "dayjs"
 
 import { getAllFilesFrontMatter } from "../../lib/posts"
 import { tagColor } from "../../components/UI/tagColor"
+import { seo } from "../../../config"
 import TagComponent from "../../components/UI/tag"
 
 const Blog = ({ posts }) => {
@@ -36,8 +38,23 @@ const Blog = ({ posts }) => {
     }
   }, [router])
 
+  const title = `Blog | ${seo.title}`
+  const description = seo.description
+  const url = `${seo.canonical}blog`
+
   return (
     <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+        }}
+      />
+
       <Box
         d="flex"
         justifyContent="center"
