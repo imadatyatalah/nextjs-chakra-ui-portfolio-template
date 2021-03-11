@@ -10,8 +10,8 @@ import {
 import { MDXProvider } from "@mdx-js/react"
 import dayjs from "dayjs"
 
-import { tagColor } from "../../components/UI/tagColor"
-import MDXComponents from "../../components/MDXComponents"
+import { tagColor } from "../components/UI/tagColor"
+import MDXComponents from "../components/MDXComponents"
 
 const Article = ({ children, frontMatter }) => {
   const router = useRouter()
