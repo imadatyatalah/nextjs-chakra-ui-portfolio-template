@@ -12,9 +12,11 @@ import dayjs from "dayjs"
 
 import { tagColor } from "../components/UI/tagColor"
 import MDXComponents from "../components/MDXComponents"
+import TagComponent from "../components/UI/tag"
 
 const Article = ({ children, frontMatter }) => {
   const router = useRouter()
+
   const color = useColorModeValue("gray.700", "gray.400")
 
   return (
@@ -37,18 +39,8 @@ const Article = ({ children, frontMatter }) => {
                   const color = tagColor[tag]
 
                   return (
-                    <Tag
-                      m="1"
-                      size="lg"
-                      pt="px"
-                      pb="1"
-                      bgColor={color.bgColor}
-                      color={color.color}
-                      transitionDuration="250ms"
-                      cursor="pointer"
-                      _hover={{
-                        backgroundColor: color.hover,
-                      }}
+                    <TagComponent
+                      color={color}
                       onClick={() =>
                         router.push({
                           pathname: "/blog/",
@@ -58,7 +50,7 @@ const Article = ({ children, frontMatter }) => {
                       key={tag}
                     >
                       {tag}
-                    </Tag>
+                    </TagComponent>
                   )
                 })}
               </Text>
