@@ -29,10 +29,12 @@ const Footer = () => (
             <ChakraLink
               href={item.path}
               aria-label={item.title}
+              mx="2"
+              _focus={{ outline: "none" }}
               key={index}
               isExternal
             >
-              <Button mx="2" aria-label={item.title}>
+              <Button aria-label={item.title}>
                 <Icon as={item.icon} w="6" h="6" />
               </Button>
             </ChakraLink>
@@ -45,19 +47,30 @@ const Footer = () => (
               ❤️
             </span>
             ,{" "}
-            <ChakraLink href="https://nextjs.org/" fontWeight="600" isExternal>
+            <ChakraLink
+              href="https://nextjs.org/"
+              fontWeight="600"
+              _focus={{ outline: "none" }}
+              isExternal
+            >
               Next.js
             </ChakraLink>
             ,{" "}
             <ChakraLink
               href="https://chakra-ui.com/"
               fontWeight="600"
+              _focus={{ outline: "none" }}
               isExternal
             >
               Chakra UI
             </ChakraLink>
             , Hosted in{" "}
-            <ChakraLink href="http://vercel.com/" fontWeight="600" isExternal>
+            <ChakraLink
+              href="http://vercel.com/"
+              fontWeight="600"
+              _focus={{ outline: "none" }}
+              isExternal
+            >
               Vercel.
             </ChakraLink>
           </Text>
