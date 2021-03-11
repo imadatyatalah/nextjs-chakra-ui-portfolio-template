@@ -11,18 +11,20 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
     components: MDXComponents,
   })
 
-  const title = frontMatter.title
-  const siteTitle = seo.title
+  const title = `${frontMatter.title} | ${seo.title}`
+  const description = frontMatter.summary
+  const url = `${seo.canonical}blog/${frontMatter.slug}`
 
   return (
     <>
       <NextSeo
-        title={`${title} | ${siteTitle}`}
-        description={frontMatter.summary}
-        canonical={`${seo.canonical}blog/${frontMatter.slug}`}
+        title={title}
+        description={description}
+        canonical={url}
         openGraph={{
-          title: title,
-          description: frontMatter.summary,
+          title,
+          description,
+          url,
           type: "article",
           article: {
             publishedTime: frontMatter.date,
