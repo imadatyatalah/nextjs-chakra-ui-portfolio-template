@@ -1,7 +1,12 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "portfolio-boilerplate-nextjs",
+  "short_name": "Next.js Portfolio",
   "icons": [
+    {
+      "src": "/apple-touche-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
