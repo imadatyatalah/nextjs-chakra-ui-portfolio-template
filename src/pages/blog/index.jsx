@@ -12,6 +12,7 @@ import BlogPost from "../../components/blogPost"
 
 const options = {
   includeScore: true,
+  threshold: 0.25,
   keys: ["title"],
 }
 
