@@ -1,36 +1,47 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
+import { Alert, AlertIcon, Box, Flex, Input, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-import {
-  Alert,
-  AlertIcon,
-  Box,
-  Heading,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
-import NextLink from "next/link"
-import dayjs from "dayjs"
+import Fuse from "fuse.js"
 
 import { getAllFilesFrontMatter } from "../../lib/posts"
 import { tagColor } from "../../components/UI/tagColor"
 import { seo } from "../../../config"
 import TagComponent from "../../components/UI/tag"
+import BlogPost from "../../components/blogPost"
+
+const options = {
+  includeScore: true,
+  keys: ["title"],
+}
 
 const Blog = ({ posts }) => {
   const router = useRouter()
 
-  const [currentSelectedTag, setCurrentSelectedTag] = useState("")
-  const [blogPost, setBlogPost] = useState(posts)
+  const fuse = new Fuse(posts, options)
 
-  const summaryColor = useColorModeValue("gray.600", "gray.300")
-  const dateColor = useColorModeValue("gray.500", "gray.400")
+  const [blogPost, setBlogPost] = useState(posts)
+  const [searchValue, setSearchValue] = useState("")
 
   const filteredPosts = (tag) => {
-    setCurrentSelectedTag(tag)
     const blogResults = posts.filter((post) => post.tags.includes(tag))
     setBlogPost(blogResults)
   }
+
+  const updateSearch = () => {
+    const results = fuse.search(searchValue)
+    const blogResults = results.map((res) => res.item)
+    setBlogPost(blogResults)
+  }
+
+  const delayedSearch = useCallback(updateSearch, [searchValue])
+
+  useEffect(() => {
+    if (searchValue.length === 0) {
+      return setBlogPost(posts)
+    }
+    delayedSearch()
+  }, [delayedSearch])
 
   useEffect(() => {
     if (router.query?.tag !== undefined) {
@@ -56,78 +67,69 @@ const Blog = ({ posts }) => {
       />
 
       <Box
-        d="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="row"
-        flexWrap="wrap"
-        m="1.5rem 0"
+        as="section"
+        fontSize="16px"
+        px={{ md: "10", lg: "20", xl: "30" }}
+        py="4"
       >
-        {Object.keys(tagColor).map((tag, index) => {
-          const color = tagColor[tag]
+        <Flex justify="center">
+          <Input
+            onChange={(e) => {
+              setSearchValue(e.target.value)
+            }}
+            value={searchValue}
+            variant="outline"
+            placeholder="Search..."
+            maxWidth="400px"
+          />
+        </Flex>
 
-          return (
-            <Box key={index}>
-              <TagComponent color={color} onClick={() => filteredPosts(tag)}>
-                {tag}
-              </TagComponent>
-            </Box>
-          )
-        })}
-      </Box>
+        <Flex
+          justify="center"
+          align="center"
+          direction="row"
+          wrap="wrap"
+          m="1.5rem 0"
+        >
+          {Object.keys(tagColor).map((tag, index) => {
+            const color = tagColor[tag]
 
-      {blogPost.length > 0 ? (
-        blogPost.map((item) => (
-          <Box my="3" py="2" px="4" rounded="md" key={item.slug}>
-            <Heading as="h3" fontSize="2xl" fontWeight="700">
-              <NextLink href={`/blog/${item.slug}`}>
-                <a>{item.title}</a>
-              </NextLink>
-            </Heading>
-
-            <Text fontSize="17px" fontWeight="400" color={summaryColor} py="1">
-              {item.summary}
-            </Text>
-
-            {item.tags.map((tag) => {
-              const color = tagColor[tag]
-
-              return (
-                <TagComponent
-                  color={color}
-                  onClick={() => filteredPosts(tag)}
-                  key={tag}
-                >
+            return (
+              <Box key={index}>
+                <TagComponent color={color} onClick={() => filteredPosts(tag)}>
                   {tag}
                 </TagComponent>
-              )
-            })}
+              </Box>
+            )
+          })}
+        </Flex>
 
-            {item.date && (
-              <Text fontSize="16px" fontWeight="500" color={dateColor} py="1">
-                {dayjs(item.date).format("MMM DD, YYYY")}
-              </Text>
-            )}
-          </Box>
-        ))
-      ) : (
-        <Alert status="info" d="flex" justifyContent="center" borderRadius="md">
-          <AlertIcon />
-          <Text fontWeight="500">
-            No blog post has been found about{" "}
-            <Text as="strong" fontWeight="700">
-              {currentSelectedTag.toUpperCase()}
-            </Text>
-            !
-          </Text>
-        </Alert>
-      )}
+        {blogPost.length > 0 ? (
+          <BlogPost posts={blogPost} />
+        ) : (
+          <Alert
+            status="info"
+            borderRadius="md"
+            d="flex"
+            justifyContent="center"
+            mx="auto"
+            maxWidth="500px"
+            fontWeight="500"
+          >
+            <AlertIcon />
+            No blog post has been found!
+          </Alert>
+        )}
+      </Box>
     </>
   )
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter("blog")
+  const data = await getAllFilesFrontMatter("blog")
+  const posts = data.sort(
+    (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
+  )
 
   return { props: { posts } }
 }
