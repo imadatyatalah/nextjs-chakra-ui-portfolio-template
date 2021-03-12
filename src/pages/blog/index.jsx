@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react"
-import { Alert, AlertIcon, Box, Flex, Input, Text } from "@chakra-ui/react"
+import { Alert, AlertIcon, Box, Flex, Input } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { NextSeo } from "next-seo"
 import Fuse from "fuse.js"

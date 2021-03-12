@@ -47,7 +47,7 @@ const BlogPost = ({ posts }) => {
 
           {post.date && (
             <Text fontSize="16px" fontWeight="500" color={dateColor} py="1">
-              {dayjs(post.date).format("MMM DD, YYYY")}
+              {dayjs(post.date).format("MMMM DD, YYYY")}
             </Text>
           )}
         </Box>
