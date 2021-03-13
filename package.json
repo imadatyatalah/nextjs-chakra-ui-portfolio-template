@@ -37,6 +37,13 @@
     "remark-slug": "^6.0.0"
   },
   "devDependencies": {
+    "globby": "^11.0.2",
     "prettier": "2.2.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": false
   }
 }
