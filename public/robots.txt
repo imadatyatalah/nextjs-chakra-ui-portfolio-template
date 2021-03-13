@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://portfolio-boilerplate-nextjs.vercel.app/sitemap.xml
