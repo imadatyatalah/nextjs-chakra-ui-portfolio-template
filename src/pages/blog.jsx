@@ -129,7 +129,7 @@ const Blog = ({ posts }) => {
 export async function getStaticProps() {
   const data = await getAllFilesFrontMatter("blog")
   const posts = data.sort(
-    (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   )
 
   return { props: { posts } }
