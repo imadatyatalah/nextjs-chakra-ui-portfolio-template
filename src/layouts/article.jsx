@@ -38,7 +38,7 @@ const Article = ({ children, frontMatter }) => {
             <Flex direction="column">
               <Text fontSize="16px" color={color} py="1">
                 {frontMatter.author} /{" "}
-                {dayjs(frontMatter.date).format("MMMM DD, YYYY")} /{" "}
+                {dayjs(frontMatter.publishedAt).format("MMMM DD, YYYY")} /{" "}
                 {frontMatter.readingTime.text}
               </Text>
               <Text py="1">

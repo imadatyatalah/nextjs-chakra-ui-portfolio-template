@@ -18,9 +18,9 @@ const BlogPost = ({ posts }) => {
   return (
     <>
       {posts.map((post) => {
-        const { slug, title, summary, tags, date } = post
+        const { slug, title, summary, tags, publishedAt } = post
 
-        const thisYear = date.substring(0, 4)
+        const thisYear = publishedAt.substring(0, 4)
 
         const YearComponent = thisYear !== year && (
           <Heading color={yearColor} mt="2">
@@ -63,11 +63,9 @@ const BlogPost = ({ posts }) => {
               )
             })}
 
-            {date && (
-              <Text fontSize="16px" fontWeight="500" color={dateColor} py="1">
-                {dayjs(date).format("MMMM DD, YYYY")}
-              </Text>
-            )}
+            <Text fontSize="16px" fontWeight="500" color={dateColor} py="1">
+              {dayjs(publishedAt).format("MMMM DD, YYYY")}
+            </Text>
           </Box>
         )
       })}

@@ -27,7 +27,8 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
           url,
           type: "article",
           article: {
-            publishedTime: frontMatter.date,
+            publishedTime: frontMatter.publishedAt,
+            modifiedTime: frontMatter.modifiedAt,
             tags: frontMatter.tags?.map((tag) => tag),
           },
         }}
