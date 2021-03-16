@@ -1,21 +1,24 @@
 import { Box, chakra, Heading, VisuallyHidden } from "@chakra-ui/react"
 
-import styles from "./styles/headings.module.css"
-
 const Headings = (props) => {
   const { children, id } = props
 
   return (
     <>
-      <Heading className={styles.heading} {...props}>
-        <Box className={styles.wrapper}>
+      <Heading my="0.75em" {...props}>
+        <Box pointerEvents="auto">
           <VisuallyHidden>Read the {children} section.</VisuallyHidden>
           {children}
           {id && (
             <chakra.a
-              aria-label="anchor"
-              className={styles.hashtag}
               href={`#${id}`}
+              pl="2px"
+              color="#3182ce"
+              fontWeight="500"
+              outline="none"
+              opacity="0"
+              _hover={{ opacity: 0.75 }}
+              aria-label="anchor"
             >
               #
             </chakra.a>
