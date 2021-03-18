@@ -45,6 +45,7 @@ const Home = () => {
           width="350"
           height="350"
           alt="avatar bigheads"
+          priority
         />
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
