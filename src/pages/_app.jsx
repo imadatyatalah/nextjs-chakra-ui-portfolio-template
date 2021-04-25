@@ -3,7 +3,7 @@ import { DefaultSeo } from "next-seo"
 
 import theme from "@/theme/index"
 import Layout from "@/layouts/global"
-import SEO from "../../next-seo.config"
+import SEO from "next-seo.config"
 
 import "@fontsource/poppins/latin-400.css"
 import "@fontsource/poppins/latin-500.css"
