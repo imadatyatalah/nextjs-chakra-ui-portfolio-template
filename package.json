@@ -37,7 +37,7 @@
     "remark-slug": "^6.0.0"
   },
   "devDependencies": {
-    "globby": "^11.0.2",
+    "globby": "^11.0.3",
     "prettier": "2.2.1"
   },
   "prettier": {
