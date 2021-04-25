@@ -1,7 +1,7 @@
 import { Box, Button, Icon, Link as ChakraLink, Text } from "@chakra-ui/react"
 import { FaGithub, FaLinkedin, FaInstagram, FaCode } from "react-icons/fa"
 
-import { MAX_WIDTH } from "../../../config"
+import { MAX_WIDTH } from "config"
 
 // Fell free to add your social media accounts!
 const socialAccounts = [

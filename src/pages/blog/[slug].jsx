@@ -14,11 +14,11 @@ import { MdEdit } from "react-icons/md"
 import dayjs from "dayjs"
 import hydrate from "next-mdx-remote/hydrate"
 
-import { getFiles, getFileBySlug } from "../../lib/posts"
-import { seo } from "../../../config"
-import { tagColor } from "../../components/UI/tagColor"
-import MDXComponents from "../../components/MDXComponents"
-import TagComponent from "../../components/UI/tag"
+import { getFiles, getFileBySlug } from "@/lib/posts"
+import { seo } from "config"
+import { tagColor } from "@/components/UI/tagColor"
+import MDXComponents from "@/components/MDXComponents"
+import TagComponent from "@/components/UI/tag"
 
 const BlogPost = ({ mdxSource, frontMatter }) => {
   const { push } = useRouter()

@@ -1,4 +1,4 @@
-import { seo } from "./config"
+import { seo } from "config"
 
 export default {
   openGraph: {

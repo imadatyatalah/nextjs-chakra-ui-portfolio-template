@@ -4,11 +4,11 @@ import { useRouter } from "next/router"
 import { NextSeo } from "next-seo"
 import Fuse from "fuse.js"
 
-import { getAllFilesFrontMatter } from "../lib/posts"
-import { tagColor } from "../components/UI/tagColor"
-import { seo } from "../../config"
-import TagComponent from "../components/UI/tag"
-import BlogPost from "../components/blogPost"
+import { getAllFilesFrontMatter } from "@/lib/posts"
+import { tagColor } from "@/components/UI/tagColor"
+import { seo } from "config"
+import TagComponent from "@/components/UI/tag"
+import BlogPost from "@/components/blogPost"
 
 const options = {
   includeScore: true,
