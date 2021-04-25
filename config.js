@@ -5,13 +5,6 @@ export const seo = {
   canonical: "https://portfolio-boilerplate-nextjs.vercel.app/",
 }
 
-export const links = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Blog", path: "/blog" },
-  { title: "Contact", path: "/contact" },
-]
-
 export const data = [
   {
     title: "Your title",
