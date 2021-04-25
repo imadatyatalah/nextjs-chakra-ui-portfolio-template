@@ -49,7 +49,7 @@ const Home = () => {
         />
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm Imad{" "}
+            Hi, I'm John Doe{" "}
             <span role="img" aria-label="hand">
               👋🏻
             </span>
@@ -69,8 +69,8 @@ const Home = () => {
             <Text as="span" fontWeight="600">
               front-end web developer
             </Text>{" "}
-            based in MA, I specialize in UI/UX design, Responsive web design,
-            And accessibility.
+            based in the US, I specialize in UI/UX design, Responsive web
+            design, And accessibility.
           </Text>
           <Button
             colorScheme="telegram"
