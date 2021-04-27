@@ -5,7 +5,7 @@ const TagComponent = ({ children, color, ...props }) => (
     <Tag
       fontSize=".9rem"
       fontWeight="600"
-      color={color.color}
+      color="white"
       backgroundColor={color.bgColor}
       minHeight="2rem"
       m="0 .5rem 7px 0"
