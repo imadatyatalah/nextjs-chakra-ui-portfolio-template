@@ -2,6 +2,7 @@
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   font-size: 15.75px;
+  font-weight: 600;
   display: flex;
   width: 100%;
   padding: 10px 8px;
@@ -26,4 +27,23 @@ pre {
 
 .remark-code-title + pre {
   padding: 0 0 10px 0;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+
+  font-weight: 400;
+  font-style: italic;
+  border-left-width: 0.25rem;
+  border-left-color: #ced4da;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p:first-of-type:before {
+  content: open-quote;
+}
+
+blockquote p:last-of-type:after {
+  content: close-quote;
 }
