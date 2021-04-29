@@ -1,6 +1,6 @@
 export const tagColor = {
   nextjs: { bgColor: "#0A7B83E2", hover: "#09686dE2" },
-  javascript: { bgColor: "#ffd500", hover: "#fdc500" },
+  javascript: { bgColor: "#ffba08", hover: "#faa307" },
   typescript: { bgColor: "#3178C6E2", hover: "#265d99E2" },
   api: { bgColor: "#E8265EE2", hover: "#ce0840E2" },
   asynchronous: { bgColor: "#1A91DAE2", hover: "#0b7bbcE2" },
@@ -14,4 +14,5 @@ export const tagColor = {
   testing: { bgColor: "#05afa0E2", hover: "#0ce5d2E2" },
   webpack: { bgColor: "#a02438", hover: "#a02438E2" },
   optimization: { bgColor: "#8f4dbf", hover: "#8f4dbfE2" },
+  markdown: { bgColor: "#168aad", hover: "#1a759f" },
 }
