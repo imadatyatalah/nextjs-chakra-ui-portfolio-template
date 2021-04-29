@@ -1,0 +1,81 @@
+---
+title: "Markdown Examples"
+publishedAt: "2021-04-29"
+modifiedAt: "2021-04-29"
+author: "Imad Atyat-Alah"
+summary: "Markdown Examples"
+tags: ["nextjs", "javascript", "markdown"]
+---
+
+## Headings
+
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
+###### h6
+
+## Text
+
+**this text is bold**
+
+_this text is italic_
+
+~~this text is strikethrough~~
+
+## Blockquotes
+
+> Somewhere, something incredible is waiting to be known.
+
+## Lists
+
+### Unordered
+
+- Lorem ipsum dolor sit amet
+- Lorem ipsum dolor sit amet
+- Lorem ipsum dolor sit amet
+
+### ordered
+
+1. Lorem ipsum dolor sit amet
+2. Lorem ipsum dolor sit amet
+3. Lorem ipsum dolor sit amet
+
+## Code
+
+Inline `code`
+
+### JavaScriptReact code
+
+```jsx:src/pages/_app.jsx
+import { ChakraProvider } from "@chakra-ui/react"
+import { DefaultSeo } from "next-seo"
+
+import theme from "@/theme/index"
+import Layout from "@/layouts/global"
+import SEO from "next-seo.config"
+
+import "@fontsource/poppins/latin-400.css"
+import "@fontsource/poppins/latin-500.css"
+import "@fontsource/poppins/latin-600.css"
+import "@fontsource/poppins/latin-700.css"
+import "@/styles/index.css"
+
+const MyApp = ({ Component, pageProps }) => (
+  <>
+    <DefaultSeo {...SEO} />
+
+    <ChakraProvider theme={theme}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ChakraProvider>
+  </>
+)
+
+export default MyApp
+```
