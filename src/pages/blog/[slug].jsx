@@ -98,7 +98,7 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
 
             <Text fontWeight="500" py="6">
               <ChakraLink
-                href={`https://github.com/imadatyatalah/portfolio-boilerplate-nextjs/blob/main/src/data/blog/${frontMatter.slug}.mdx`}
+                href={`https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template/blob/main/src/data/blog/${frontMatter.slug}.mdx`}
                 d="flex"
                 alignItems="flex-end"
                 _focus={{ outline: "none" }}

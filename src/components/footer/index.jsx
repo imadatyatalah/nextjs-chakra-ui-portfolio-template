@@ -77,7 +77,7 @@ const Footer = () => (
         </Box>
         <Box py="2">
           <ChakraLink
-            href="https://github.com/imadatyatalah/portfolio-boilerplate-nextjs"
+            href="https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template"
             aria-label="source code"
             isExternal
           >
