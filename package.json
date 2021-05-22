@@ -25,7 +25,7 @@
     "fuse.js": "^6.4.6",
     "gray-matter": "^4.0.3",
     "hamburger-react": "^2.4.1",
-    "next": "10.2.1",
+    "next": "10.2.2",
     "next-mdx-remote": "^2.1.4",
     "next-seo": "^4.24.0",
     "prism-react-renderer": "^1.2.0",
