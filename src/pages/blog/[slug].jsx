@@ -90,7 +90,7 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
           </Box>
 
           <Box as="article">
-            <MDXRemote {...mdxSource} />
+            <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
 
             <Text fontWeight="500" py="6">
               <ChakraLink
