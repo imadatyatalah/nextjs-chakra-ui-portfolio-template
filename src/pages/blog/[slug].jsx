@@ -11,8 +11,8 @@ import {
 } from "@chakra-ui/react"
 import { MDXProvider } from "@mdx-js/react"
 import { MdEdit } from "react-icons/md"
+import { MDXRemote } from "next-mdx-remote"
 import dayjs from "dayjs"
-import hydrate from "next-mdx-remote/hydrate"
 
 import { getFiles, getFileBySlug } from "@/lib/posts"
 import { seo } from "config"
@@ -24,10 +24,6 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
   const { push } = useRouter()
 
   const color = useColorModeValue("gray.700", "gray.400")
-
-  const content = hydrate(mdxSource, {
-    components: MDXComponents,
-  })
 
   const title = `${frontMatter.title} | ${seo.title}`
   const description = frontMatter.summary
@@ -94,7 +90,7 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
           </Box>
 
           <Box as="article">
-            {content}
+            <MDXRemote {...mdxSource} />
 
             <Text fontWeight="500" py="6">
               <ChakraLink
