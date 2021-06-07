@@ -17,7 +17,7 @@
     "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "@fontsource/poppins": "^4.4.2",
+    "@fontsource/poppins": "^4.4.5",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.3",
     "dayjs": "^1.10.5",
