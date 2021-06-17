@@ -45,6 +45,8 @@ const Home = () => {
           width="350"
           height="350"
           alt="avatar bigheads"
+          placeholder="blur"
+          blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
           priority
         />
         <Box>
@@ -110,6 +112,8 @@ const Home = () => {
                 width="500"
                 height="500"
                 alt={item.title}
+                placeholder="blur"
+                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
               />
             </Box>
 
