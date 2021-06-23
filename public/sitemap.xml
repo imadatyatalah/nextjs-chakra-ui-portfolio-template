@@ -14,6 +14,18 @@
 
   <url>
     <loc
+      >https://portfolio-boilerplate-nextjs.vercel.app/blog/markdown-examples</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://portfolio-boilerplate-nextjs.vercel.app/blog/portfolio-boilerplate-nextjs-introducing</loc
+    >
+  </url>
+
+  <url>
+    <loc
       >https://portfolio-boilerplate-nextjs.vercel.app/blog/pre-rendering</loc
     >
   </url>
