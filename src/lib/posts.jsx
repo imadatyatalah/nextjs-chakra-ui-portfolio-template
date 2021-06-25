@@ -43,12 +43,6 @@ export async function getAllFilesFrontMatter(type) {
     )
     const { data } = matter(source)
 
-    return [
-      {
-        ...data,
-        slug: postSlug.replace(".mdx", ""),
-      },
-      ...allPosts,
-    ]
+    return [{ ...data, slug: postSlug.replace(".mdx", "") }, ...allPosts]
   }, [])
 }
