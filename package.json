@@ -20,7 +20,7 @@
     "@fontsource/poppins": "^4.4.5",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.0.1",
-    "dayjs": "^1.10.5",
+    "dayjs": "^1.10.6",
     "framer-motion": "^4.1.17",
     "fuse.js": "^6.4.6",
     "gray-matter": "^4.0.3",
