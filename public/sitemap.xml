@@ -1,36 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://portfolio-boilerplate-nextjs.vercel.app/blog</loc>
-  </url>
-
-  <url>
-    <loc>https://portfolio-boilerplate-nextjs.vercel.app</loc>
-  </url>
-
-  <url>
-    <loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/lorem-ipsum</loc>
-  </url>
-
-  <url>
-    <loc
-      >https://portfolio-boilerplate-nextjs.vercel.app/blog/markdown-examples</loc
-    >
-  </url>
-
-  <url>
-    <loc
-      >https://portfolio-boilerplate-nextjs.vercel.app/blog/portfolio-boilerplate-nextjs-introducing</loc
-    >
-  </url>
-
-  <url>
-    <loc
-      >https://portfolio-boilerplate-nextjs.vercel.app/blog/pre-rendering</loc
-    >
-  </url>
-
-  <url>
-    <loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/ssg-ssr</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/lorem-ipsum</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/markdown-examples</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/portfolio-boilerplate-nextjs-introducing</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/pre-rendering</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
+<url><loc>https://portfolio-boilerplate-nextjs.vercel.app/blog/ssg-ssr</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-09-11T19:37:36.955Z</lastmod></url>
 </urlset>
