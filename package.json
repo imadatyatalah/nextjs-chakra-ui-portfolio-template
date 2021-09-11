@@ -36,7 +36,7 @@
     "react-icons": "^4.2.0",
     "reading-time": "^1.4.0",
     "remark-code-titles": "^0.1.2",
-    "remark-slug": "^6.1.0"
+    "remark-slug": "^7.0.0"
   },
   "devDependencies": {
     "next-sitemap": "^1.6.168",
