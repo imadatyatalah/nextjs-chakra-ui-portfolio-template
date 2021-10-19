@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { NextSeo } from "next-seo"
 import Fuse from "fuse.js"
 
-import { getAllFilesFrontMatter } from "@/lib/posts"
+import { allPosts } from ".contentlayer/data"
 import { tagColor } from "@/components/UI/tagColor"
 import { seo } from "config"
 import TagComponent from "@/components/UI/tag"
@@ -26,7 +26,7 @@ const Blog = ({ posts }) => {
   const [searchValue, setSearchValue] = useState("")
 
   const filteredPosts = (tag) => {
-    const blogResults = posts.filter((post) => post.tags.includes(tag))
+    const blogResults = posts.filter((post) => post.tags?.includes(tag))
     setBlogPost(blogResults)
   }
 
@@ -51,21 +51,12 @@ const Blog = ({ posts }) => {
     }
   }, [router])
 
-  const title = `Blog | ${seo.title}`
-  const description = seo.description
-  const url = `${seo.canonical}blog`
-
   return (
     <>
       <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
-        openGraph={{
-          title,
-          description,
-          url,
-        }}
+        title={`Blog | ${seo.title}`}
+        description={seo.description}
+        canonical={`${seo.canonical}blog`}
       />
 
       <Box
@@ -127,13 +118,24 @@ const Blog = ({ posts }) => {
   )
 }
 
+// NOTE: The functionality below will soon become part of Contentlayer.
+const pick = (obj, keys) => {
+  return keys.reduce((acc, key) => {
+    acc[key] = obj[key]
+    return acc
+  }, {})
+}
+
 export async function getStaticProps() {
-  const data = await getAllFilesFrontMatter("blog")
-  const posts = data.sort(
+  const posts = allPosts.map((post) =>
+    pick(post, ["slug", "title", "summary", "publishedAt", "tags"])
+  )
+
+  const sortedPosts = posts.sort(
     (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   )
 
-  return { props: { posts } }
+  return { props: { posts: sortedPosts } }
 }
 
 export default Blog

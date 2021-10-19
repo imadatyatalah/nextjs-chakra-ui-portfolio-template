@@ -3,14 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "repository": {
-    "url": "https://github.com/imadatyatalah/portfolio-boilerplate-nextjs"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap --config next-sitemap.js",
+    "postbuild": "NODE_OPTIONS='--experimental-json-modules' next-sitemap --config next-sitemap.js",
     "prettier:format": "prettier --write .",
     "prettier:check": "prettier --check ."
   },
@@ -20,23 +17,25 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@fontsource/poppins": "^4.5.0",
-    "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.2",
+    "contentlayer": "^0.0.27",
     "dayjs": "^1.10.7",
+    "esbuild": "^0.13.8",
     "framer-motion": "^4.1.17",
     "fuse.js": "^6.4.6",
-    "gray-matter": "^4.0.3",
     "hamburger-react": "^2.4.1",
-    "next": "11.1.2",
-    "next-mdx-remote": "^2.1.4",
+    "mdx-bundler": "^6.0.2",
+    "next": "^11.1.2",
+    "next-contentlayer": "^0.0.27",
     "next-seo": "^4.26.0",
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "reading-time": "^1.5.0",
-    "remark-code-titles": "^0.1.2",
-    "remark-slug": "^6.1.0"
+    "rehype-code-titles": "^1.0.3",
+    "remark-gfm": "^3.0.0",
+    "remark-slug": "^7.0.0"
   },
   "devDependencies": {
     "next-sitemap": "^1.6.168",

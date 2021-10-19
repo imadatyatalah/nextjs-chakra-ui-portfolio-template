@@ -18,7 +18,7 @@ const MDXComponents = {
   h5: (props) => <Headings as="h5" fontSize="16px" {...props} />,
   h6: (props) => <Headings as="h6" fontSize="14px" {...props} />,
 
-  code: CodeBlock,
+  // code: CodeBlock,
   a: CustomLink,
   ul: UnorderedList,
   ol: OrderedList,

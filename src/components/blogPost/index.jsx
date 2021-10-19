@@ -44,7 +44,7 @@ const BlogPost = ({ posts }) => {
               {summary}
             </Text>
 
-            {tags.map((tag) => {
+            {tags?.map((tag) => {
               const color = tagColor[tag]
 
               return (

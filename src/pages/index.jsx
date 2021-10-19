@@ -9,18 +9,13 @@ const Home = () => {
 
   const isOdd = (num) => num % 2
 
-  const title = `Home | ${seo.title}`
-  const description = seo.description
-
   return (
     <>
       <NextSeo
-        title={title}
-        description={description}
+        title={`Home | ${seo.title}`}
+        description={seo.description}
         canonical={seo.canonical}
         openGraph={{
-          title,
-          description,
           images: [
             {
               url: `${seo.canonical}bighead.svg`,
