@@ -33,7 +33,7 @@
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.2.0",
+    "react-icons": "^4.3.1",
     "reading-time": "^1.5.0",
     "remark-code-titles": "^0.1.2",
     "remark-slug": "^6.1.0"
