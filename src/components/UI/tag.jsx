@@ -1,4 +1,4 @@
-import { Tag } from "@chakra-ui/react"
+import { Tag } from "@chakra-ui/react";
 
 const TagComponent = ({ children, color, ...props }) => (
   <>
@@ -19,6 +19,6 @@ const TagComponent = ({ children, color, ...props }) => (
       {children}
     </Tag>
   </>
-)
+);
 
-export default TagComponent
+export default TagComponent;

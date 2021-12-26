@@ -1,16 +1,22 @@
-import { Box, Button, Heading, Text, useColorModeValue } from "@chakra-ui/react"
-import { NextSeo } from "next-seo"
-import NextImage from "next/image"
+import {
+  Box,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
+import NextImage from "next/image";
 
-import { seo, data } from "config"
+import { seo, data } from "config";
 
 const Home = () => {
-  const color = useColorModeValue("telegram.500", "telegram.400")
+  const color = useColorModeValue("telegram.500", "telegram.400");
 
-  const isOdd = (num) => num % 2
+  const isOdd = (num) => num % 2;
 
-  const title = `Home | ${seo.title}`
-  const description = seo.description
+  const title = "Home";
+  const description = seo.description;
 
   return (
     <>
@@ -125,7 +131,7 @@ const Home = () => {
         ))}
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

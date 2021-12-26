@@ -1,5 +1,5 @@
-import { chakra } from "@chakra-ui/react"
-import NextLink from "next/link"
+import { chakra } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Logo = () => (
   <>
@@ -9,6 +9,6 @@ const Logo = () => (
       </chakra.a>
     </NextLink>
   </>
-)
+);
 
-export default Logo
+export default Logo;

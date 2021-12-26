@@ -1,5 +1,5 @@
-import { NextSeo } from "next-seo"
-import { useRouter } from "next/router"
+import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 import {
   Box,
   Flex,
@@ -8,30 +8,30 @@ import {
   Link as ChakraLink,
   useColorModeValue,
   Icon,
-} from "@chakra-ui/react"
-import { MDXProvider } from "@mdx-js/react"
-import { MdEdit } from "react-icons/md"
-import dayjs from "dayjs"
-import hydrate from "next-mdx-remote/hydrate"
+} from "@chakra-ui/react";
+import { MDXProvider } from "@mdx-js/react";
+import { MdEdit } from "react-icons/md";
+import dayjs from "dayjs";
+import hydrate from "next-mdx-remote/hydrate";
 
-import { getFiles, getFileBySlug } from "@/lib/posts"
-import { seo } from "config"
-import { tagColor } from "@/components/UI/tagColor"
-import MDXComponents from "@/components/MDXComponents"
-import TagComponent from "@/components/UI/tag"
+import { getFiles, getFileBySlug } from "@/lib/posts";
+import { seo } from "config";
+import { tagColor } from "@/components/UI/tagColor";
+import MDXComponents from "@/components/MDXComponents";
+import TagComponent from "@/components/UI/tag";
 
 const BlogPost = ({ mdxSource, frontMatter }) => {
-  const { push } = useRouter()
+  const { push } = useRouter();
 
-  const color = useColorModeValue("gray.700", "gray.400")
+  const color = useColorModeValue("gray.700", "gray.400");
 
   const content = hydrate(mdxSource, {
     components: MDXComponents,
-  })
+  });
 
-  const title = `${frontMatter.title} | ${seo.title}`
-  const description = frontMatter.summary
-  const url = `${seo.canonical}blog/${frontMatter.slug}`
+  const title = frontMatter.title;
+  const description = frontMatter.summary;
+  const url = `${seo.canonical}blog/${frontMatter.slug}`;
 
   return (
     <>
@@ -72,7 +72,7 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
               </Text>
               <Text py="1">
                 {frontMatter.tags.map((tag) => {
-                  const color = tagColor[tag]
+                  const color = tagColor[tag];
 
                   return (
                     <TagComponent
@@ -87,7 +87,7 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
                     >
                       {tag}
                     </TagComponent>
-                  )
+                  );
                 })}
               </Text>
             </Flex>
@@ -112,11 +112,11 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
         </Box>
       </MDXProvider>
     </>
-  )
-}
+  );
+};
 
 export const getStaticPaths = async () => {
-  const posts = await getFiles("blog")
+  const posts = await getFiles("blog");
 
   return {
     paths: posts.map((post) => ({
@@ -126,13 +126,13 @@ export const getStaticPaths = async () => {
     })),
 
     fallback: false,
-  }
-}
+  };
+};
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getFileBySlug("blog", params.slug)
+  const post = await getFileBySlug("blog", params.slug);
 
-  return { props: post }
-}
+  return { props: post };
+};
 
-export default BlogPost
+export default BlogPost;

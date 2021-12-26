@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 import {
   CustomLink,
@@ -6,9 +6,9 @@ import {
   OrderedList,
   ListItem,
   InlineCode,
-} from "./common"
-import Headings from "./headings"
-import CodeBlock from "./codeBlock"
+} from "./common";
+import Headings from "./headings";
+import CodeBlock from "./codeBlock";
 
 const MDXComponents = {
   h1: (props) => <Headings as="h1" fontSize="36px" {...props} />,
@@ -25,6 +25,6 @@ const MDXComponents = {
   li: ListItem,
   inlineCode: InlineCode,
   Image,
-}
+};
 
-export default MDXComponents
+export default MDXComponents;

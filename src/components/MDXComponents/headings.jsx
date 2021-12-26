@@ -1,7 +1,7 @@
-import { Box, chakra, Heading, VisuallyHidden } from "@chakra-ui/react"
+import { Box, chakra, Heading, VisuallyHidden } from "@chakra-ui/react";
 
 const Headings = (props) => {
-  const { children, id } = props
+  const { children, id } = props;
 
   return (
     <>
@@ -26,7 +26,7 @@ const Headings = (props) => {
         </Box>
       </Heading>
     </>
-  )
-}
+  );
+};
 
-export default Headings
+export default Headings;

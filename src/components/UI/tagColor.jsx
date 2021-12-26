@@ -15,4 +15,4 @@ export const tagColor = {
   webpack: { bgColor: "#a02438", hover: "#a02438E2" },
   optimization: { bgColor: "#8f4dbf", hover: "#8f4dbfE2" },
   markdown: { bgColor: "#168aad", hover: "#1a759f" },
-}
+};
