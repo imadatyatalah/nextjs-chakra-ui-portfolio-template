@@ -1,20 +1,20 @@
-import { Link as ChakraLink, chakra, Code } from "@chakra-ui/react"
-import NextLink from "next/link"
+import { Link as ChakraLink, chakra, Code } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export const CustomLink = (props) => {
-  const href = props.href
-  const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"))
+  const href = props.href;
+  const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
 
   if (isInternalLink) {
     return (
       <NextLink href={href} passHref>
         <ChakraLink {...props} />
       </NextLink>
-    )
+    );
   }
 
-  return <ChakraLink isExternal {...props} />
-}
+  return <ChakraLink isExternal {...props} />;
+};
 
 export const UnorderedList = (props) => (
   <>
@@ -23,7 +23,7 @@ export const UnorderedList = (props) => (
       {...props}
     />
   </>
-)
+);
 
 export const OrderedList = (props) => (
   <>
@@ -32,16 +32,16 @@ export const OrderedList = (props) => (
       {...props}
     />
   </>
-)
+);
 
 export const ListItem = (props) => (
   <>
     <chakra.li style={{ paddingBottom: "0.25rem" }} {...props} />
   </>
-)
+);
 
 export const InlineCode = (props) => (
   <>
     <Code {...props} />
   </>
-)
+);

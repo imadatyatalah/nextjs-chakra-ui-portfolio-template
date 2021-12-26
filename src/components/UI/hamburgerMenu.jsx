@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react"
-import { Turn as Hamburger } from "hamburger-react"
+import { Box } from "@chakra-ui/react";
+import { Turn as Hamburger } from "hamburger-react";
 
 const HamburgerMenu = ({ toggled, toggle }) => (
   <>
@@ -14,6 +14,6 @@ const HamburgerMenu = ({ toggled, toggle }) => (
       />
     </Box>
   </>
-)
+);
 
-export default HamburgerMenu
+export default HamburgerMenu;

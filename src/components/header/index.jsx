@@ -1,8 +1,8 @@
-import { Box } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react";
 
-import { MAX_WIDTH } from "config"
-import Logo from "../UI/logo"
-import Navbar from "./navbar"
+import { MAX_WIDTH } from "config";
+import Logo from "../UI/logo";
+import Navbar from "./navbar";
 
 const Header = () => (
   <>
@@ -21,6 +21,6 @@ const Header = () => (
       </Box>
     </Box>
   </>
-)
+);
 
-export default Header
+export default Header;

@@ -1,19 +1,19 @@
-import { useState } from "react"
-import { Box, chakra, useColorModeValue } from "@chakra-ui/react"
-import NextLink from "next/link"
+import { useState } from "react";
+import { Box, chakra, useColorModeValue } from "@chakra-ui/react";
+import NextLink from "next/link";
 
-import HamburgerMenu from "../UI/hamburgerMenu"
-import ColorModeToggle from "../UI/colorModeToggle"
+import HamburgerMenu from "../UI/hamburgerMenu";
+import ColorModeToggle from "../UI/colorModeToggle";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const bg = useColorModeValue("gray.200", "gray.300")
-  const color = useColorModeValue("black", "white")
+  const bg = useColorModeValue("gray.200", "gray.300");
+  const color = useColorModeValue("black", "white");
 
   const closeMenu = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -67,7 +67,7 @@ const Navbar = () => {
         <ColorModeToggle />
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

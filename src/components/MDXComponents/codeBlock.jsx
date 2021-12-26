@@ -1,15 +1,15 @@
-import { Box, Button, useClipboard, useColorMode } from "@chakra-ui/react"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import lightTheme from "prism-react-renderer/themes/nightOwlLight"
-import darkTheme from "prism-react-renderer/themes/nightOwl"
+import { Box, Button, useClipboard, useColorMode } from "@chakra-ui/react";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import lightTheme from "prism-react-renderer/themes/nightOwlLight";
+import darkTheme from "prism-react-renderer/themes/nightOwl";
 
-import styles from "./styles/codeBlock.module.css"
+import styles from "./styles/codeBlock.module.css";
 
 const CodeBlock = ({ children, className }) => {
-  const { colorMode } = useColorMode()
-  const { hasCopied, onCopy } = useClipboard(children)
+  const { colorMode } = useColorMode();
+  const { hasCopied, onCopy } = useClipboard(children);
 
-  const language = className.replace(/language-/, "")
+  const language = className.replace(/language-/, "");
 
   return (
     <>
@@ -53,7 +53,7 @@ const CodeBlock = ({ children, className }) => {
         </Highlight>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default CodeBlock
+export default CodeBlock;

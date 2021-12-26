@@ -1,8 +1,8 @@
-import { Box } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react";
 
-import { MAX_WIDTH } from "config"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import { MAX_WIDTH } from "config";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const Layout = ({ children }) => (
   <>
@@ -12,6 +12,6 @@ const Layout = ({ children }) => (
     </Box>
     <Footer />
   </>
-)
+);
 
-export default Layout
+export default Layout;
