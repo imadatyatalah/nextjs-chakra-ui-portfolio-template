@@ -10,8 +10,8 @@ const socialAccounts = [
   { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
 ];
 
-const Footer = () => (
-  <>
+const Footer = () => {
+  return (
     <Box as="footer">
       <Box
         display="flex"
@@ -88,7 +88,7 @@ const Footer = () => (
         </Box>
       </Box>
     </Box>
-  </>
-);
+  );
+};
 
 export default Footer;

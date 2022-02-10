@@ -4,8 +4,8 @@ import { MAX_WIDTH } from "config";
 import Logo from "../UI/logo";
 import Navbar from "./navbar";
 
-const Header = () => (
-  <>
+const Header = () => {
+  return (
     <Box as="header" boxShadow="md">
       <Box
         display="flex"
@@ -20,7 +20,7 @@ const Header = () => (
         <Navbar />
       </Box>
     </Box>
-  </>
-);
+  );
+};
 
 export default Header;

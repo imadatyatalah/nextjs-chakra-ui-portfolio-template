@@ -1,7 +1,7 @@
 import { Tag } from "@chakra-ui/react";
 
-const TagComponent = ({ children, color, ...props }) => (
-  <>
+const TagComponent = ({ children, color, ...props }) => {
+  return (
     <Tag
       fontSize=".9rem"
       fontWeight="600"
@@ -18,7 +18,7 @@ const TagComponent = ({ children, color, ...props }) => (
     >
       {children}
     </Tag>
-  </>
-);
+  );
+};
 
 export default TagComponent;
