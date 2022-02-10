@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 import dayjs from "dayjs";
 
-import { tagColor } from "../UI/tagColor";
-import TagComponent from "../UI/tag";
+import { tagColor } from "./UI/tagColor";
+import TagComponent from "./UI/tag";
 
 const BlogPost = ({ posts }) => {
   const router = useRouter();
