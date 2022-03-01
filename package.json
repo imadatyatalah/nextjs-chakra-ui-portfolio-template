@@ -23,7 +23,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^12.0.10",
     "dayjs": "^1.10.7",
-    "framer-motion": "^5",
+    "framer-motion": "^6",
     "fuse.js": "^6.5.3",
     "gray-matter": "^4.0.3",
     "hamburger-react": "^2.4.1",
