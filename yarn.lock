@@ -1741,10 +1741,10 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.0.10.tgz#561640fd62279218ccd2798ae907bae8d94a7730"
   integrity sha512-mQVj0K6wQ5WEk/sL9SZ+mJXJUaG7el8CpZ6io1uFe9GgNTSC7EgUyNGqM6IQovIFc5ukF4O/hqsdh3S/DCgT2g==
 
-"@next/mdx@^12.0.10":
-  version "12.0.10"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-12.0.10.tgz#2439b4f8a2d4eed4b04b262ab4455428e1b1e18b"
-  integrity sha512-1p1PKkXhTqbdIUxL+BZw2EJQJ8d6eIUYHDvEph1YH3jp19RC9AmneHhazBBR6Bw4nZkA72xMFG75jQ04tZ20Fg==
+"@next/mdx@^12.1.5":
+  version "12.1.5"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-12.1.5.tgz#302fbf195b406d32423f6a0317771d3b27f88e8e"
+  integrity sha512-3R8J/3jKz4bCAOWDKVhxXoUETy3eqC+zaNlgwLK7LAid3UZjioVZ+jxIJmopd1auqjpev7doKeRE2p8YG55QLg==
 
 "@next/swc-android-arm64@12.0.10":
   version "12.0.10"
