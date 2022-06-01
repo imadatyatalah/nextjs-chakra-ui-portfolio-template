@@ -39,7 +39,7 @@
     "remark-slug": "^7.0.1"
   },
   "devDependencies": {
-    "next-sitemap": "^1.6.203",
+    "next-sitemap": "^2.5.28",
     "prettier": "^2.5.1"
   }
 }
