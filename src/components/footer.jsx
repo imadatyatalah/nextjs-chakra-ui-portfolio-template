@@ -3,11 +3,10 @@ import { FaGithub, FaLinkedin, FaInstagram, FaCode } from "react-icons/fa";
 
 import { MAX_WIDTH } from "config";
 
-// Fell free to add your social media accounts!
 const socialAccounts = [
-  { icon: FaGithub, path: "https://github.com/", title: "Github" },
-  { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
-  { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
+  { icon: FaGithub, path: "https://github.com/helton-quintans", title: "Github" },
+  { icon: FaLinkedin, path: "https://www.linkedin.com/heltonquintans", title: "Linkedin" },
+  { icon: FaInstagram, path: "https://www.instagram.com/helton_quintans", title: "Instagram" },
 ];
 
 const Footer = () => {
@@ -34,7 +33,7 @@ const Footer = () => {
               key={index}
               isExternal
             >
-              <Button aria-label={item.title}>
+              <Button variant="gost" aria-label={item.title}>
                 <Icon as={item.icon} w="6" h="6" />
               </Button>
             </ChakraLink>
