@@ -200,18 +200,22 @@ const Home = () => {
           <video
             id="video"
             title="reduce"
-            muted
             poster="/images/thumb.png"
-            autoPlay
             controls
             allowFullScreen
-            src="../assets/videos/reduce.mp4 "
+            src="/assets/videos/reduce.mp4"
           />
         </AspectRatio>
       </MotionBox>
 
       {/* //! PROJECTS */}
-      <Stack as="section" id="projects" alignItems="center" flexDir="column" p="4">
+      <Stack
+        as="section"
+        id="projects"
+        alignItems="center"
+        flexDir="column"
+        p="4"
+      >
         <Heading
           as="h1"
           mt="10"
@@ -278,7 +282,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox
           p="4"
           borderRadius="8"
@@ -338,7 +342,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox
           p="4"
           borderRadius="8"
@@ -393,7 +397,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox
           p="4"
           borderRadius="8"
@@ -449,7 +453,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox p="4" borderRadius="8">
           <MotionBox
             d="flex"
@@ -501,7 +505,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox
           p="4"
           borderRadius="8"
@@ -556,7 +560,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox
           p="4"
           borderRadius="8"
@@ -613,7 +617,7 @@ const Home = () => {
           </MotionBox>
         </MotionBox>
       </SimpleGrid>
-      <SimpleGrid minChildWidth="320px"  gap={2}>
+      <SimpleGrid minChildWidth="320px" gap={2}>
         <MotionBox p="4" borderRadius="8">
           <MotionBox
             d="flex"
@@ -690,6 +694,7 @@ const Home = () => {
             variant={container}
             initial="hidden"
             animate="visible"
+            size="sm"
           >
             <Stack alignItems="center" textAlign="center" p="8">
               <SiHtml5 size={80} />
