@@ -57,8 +57,28 @@ const Navbar = () => {
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
         >
+          <NextLink href="#projects">
+            <a onClick={closeMenu}>Projects</a>
+          </NextLink>
+        </chakra.li>
+
+        <chakra.li
+          listStyleType="none"
+          px={{ lg: "8" }}
+          py={{ base: "3", lg: "0" }}
+        >
           <NextLink href="/blog">
             <a onClick={closeMenu}>Blog</a>
+          </NextLink>
+        </chakra.li>
+
+        <chakra.li
+          listStyleType="none"
+          px={{ lg: "8" }}
+          py={{ base: "3", lg: "0" }}
+        >
+          <NextLink rel="noreferrer noopener" target="_blank" href="/cv.pdf" >
+            <a onClick={closeMenu} download>Resume</a>
           </NextLink>
         </chakra.li>
       </chakra.ul>
