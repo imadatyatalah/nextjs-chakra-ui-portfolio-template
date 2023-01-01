@@ -2664,10 +2664,10 @@ next-mdx-remote@^2.1.4:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
 
-next-seo@^4.28.1:
-  version "4.28.1"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.28.1.tgz#c98ee559c8ab7196c62d0f6903afd7a8cde47a03"
-  integrity sha512-WZgwdM+UhpNF3A37zFllzmPhnOVJ9vYeYlc0n3Z/kYfz/QQgy8NEdncNNggS9dU4JD8xriaCcyknhy5OsrFsJw==
+next-seo@^5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.15.0.tgz#b1a90508599774982909ea44803323c6fb7b50f4"
+  integrity sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==
 
 next-sitemap@^1.6.203:
   version "1.6.203"
