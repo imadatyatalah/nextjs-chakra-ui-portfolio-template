@@ -1741,10 +1741,12 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.0.10.tgz#561640fd62279218ccd2798ae907bae8d94a7730"
   integrity sha512-mQVj0K6wQ5WEk/sL9SZ+mJXJUaG7el8CpZ6io1uFe9GgNTSC7EgUyNGqM6IQovIFc5ukF4O/hqsdh3S/DCgT2g==
 
-"@next/mdx@^12.0.10":
-  version "12.0.10"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-12.0.10.tgz#2439b4f8a2d4eed4b04b262ab4455428e1b1e18b"
-  integrity sha512-1p1PKkXhTqbdIUxL+BZw2EJQJ8d6eIUYHDvEph1YH3jp19RC9AmneHhazBBR6Bw4nZkA72xMFG75jQ04tZ20Fg==
+"@next/mdx@^13.2.1":
+  version "13.2.1"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-13.2.1.tgz#67969ec2dcd81a2a53ade955f3981df64f1e993d"
+  integrity sha512-kWriuAxU3euPUugwoOI7WEo596QeHsxrbneKvItwrfu4YYZZLKNPHSnkLHvF7tlO9TjiPbFqYlK2xHK02Lp2SA==
+  dependencies:
+    source-map "^0.7.0"
 
 "@next/swc-android-arm64@12.0.10":
   version "12.0.10"
@@ -3094,6 +3096,11 @@ source-map@^0.5.0, source-map@^0.5.7:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
+
+source-map@^0.7.0:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
+  integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
 space-separated-tokens@^1.0.0:
   version "1.1.5"
